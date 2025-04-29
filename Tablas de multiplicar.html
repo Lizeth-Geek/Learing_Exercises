@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<h1>Tablas de multiplicar</h1>
+
+<script>
+//En teoría así debería de ser pero nuevamente no quiere :/
+
+function saltarLinea() {
+		document.write("<br>");
+		document.write("<br›");
+	}
+
+function imprimir(frase) {
+	document.write(frase);
+	saltarLinea();
+	
+	}
+
+imprimir("Versión con While");
+
+var multiplicador = 1
+
+while (multiplicador <= 10) {
+	imprimir(5 * multiplicador);
+	//multiplicador = multiplicador + 1;
+	//Se supone de que la otra forma funciona igual y es más práctico y común entre los programadores.
+	multiplicador++;
+}
+
+imprimir("Versión con For");
+
+//for (var multiplicador =1;multiplicador <= 10;multiplicador = multiplicador + 1) {
+for (var multiplicador =1;multiplicador <= 10;multiplicador++) {
+	imprimir(5 * multiplicador);
+
+}
+
+</script>

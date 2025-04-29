@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<h1>Calculadora del IMC - Índice de Masa Corporal</h1>
+<h2> Estructura interactiva para calcular el IMC </h2)
+<br>
+<h2> BIENVENIDX, FAVOR DE INGRESAR LOS DATOS REQUERIDOS </h2>
+
+<script>
+//No sé porqué pero los if's no me funcionan :( Ya lo cheque varias veces y no me da.
+function saltarLinea() {
+		document.write("<br>");
+		document.write("<br›");
+	}
+
+function imprimir(frase) {
+	document.write(frase);
+	saltarLinea();
+	
+	}
+
+function CalcularImc(peso, altura) {
+	return (peso / (altura*altura));
+
+}
+	
+	nombreIngresado = prompt ("Anote su nombre")
+	pesoIngresado = prompt (nombreIngresado + ", Ponga su peso en Kg")
+	alturaIngresada = prompt (nombreIngresado + ", Escriba su altura en metros")
+	
+	imcCalculado = CalcularImc(pesoIngresado,alturaIngresada)
+	
+	imprimir(nombreIngresado + ", su IMC calculado es: " + imcCalculado);
+
+
+	if (imcCalculado < 18.5) {
+		imprimir("Su IMC está por debajo de lo recomendado");
+	}
+	
+	if (imcCalculado >= 18.5) {
+		if (imcCalculado < 25) {
+			imprimir("Su IMC está dentro del intervalo normal");
+		}
+	}
+	
+	if (imcCalculado >= 25) {
+		if (imcCalculado < 30) {
+			imprimir("IMC considerado como sobrepeso");
+		}
+	}
+
+	if (imcCalculado <= 30) {
+		imprimir("Su IMC está considerado como obesidad");
+	}
+
+</script>

@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+<h1>Calculadora del IMC - Índice de Masa Corporal</h1>
+
+<script>
+function saltarLinea() {
+		document.write("<br>");
+		document.write("<br›");
+		document.write("<br>");
+	}
+
+function CalcularImc(peso, altura) {
+	imc = (peso / (altura*altura));
+	return(imc);
+
+}
+
+function imprimir(frase) {
+	document.write(frase);
+	saltarLinea();
+	
+	}
+
+	pesoPersonaX = 50
+	alturaPersonaX = 1.56
+	imcPersonaX = (pesoPersonaX / (alturaPersonaX*alturaPersonaX))
+	imprimir("El IMC de una persona X es " + imcPersonaX)
+
+	pesoPersonaY = 80
+	alturaPersonaY = 1.89
+	imcPersonaY = (pesoPersonaY / (alturaPersonaY*alturaPersonaY))
+	imprimir("El IMC de una persona Y es " + imcPersonaY)
+
+	saltarLinea() 
+	document.write("Estructura del IMC más directa, en código fuente. A continación ejemplos de ello");
+	saltarLinea() 
+
+function calcularImc(peso, altura, nombre) {
+	imc = peso / (altura * altura); 
+	imprimir("El IMC calculado de " + nombre + " es " + imc);
+}
+	calcularImc(71,1.72, "Paquito");
+	calcularImc(75,1.73, "Juan");
+
+saltarLinea() 
+	document.write("Estructura del IMC simplificada para calcular el promedio del IMC");
+saltarLinea() 
+
+//function calcularImc(peso, altura) {
+	//imc = peso / (altura * altura); 
+	//return imc;
+//}	
+	//Ya no fue necesario agregar esta otra función porque ya estaba arriba. Se hizo más claro y se mostraron los datos de Paquito y Juanito, cuando antes se ocultaban
+	
+imprimir("El IMC promedio de persona X y Y es " + (imcPersonaX+imcPersonaX/2));
+
+saltarLinea() 
+	document.write("Estructura interactiva para calcular el IMC");
+saltarLinea() 
+saltarLinea() 
+	document.write("BIENVENIDX, FAVOR DE INGRESAR LOS DATOS REQUERIDOS");
+saltarLinea() 
+
+	nombreIngresado = prompt ("Anote su nombre")
+	pesoIngresado = prompt (nombreIngresado + ", Ponga su peso en Kg")
+	alturaIngresada = prompt (nombreIngresado + , "Escriba su altura en metros")
+	
+	imcCalculado = CalcularImc(pesoIngresado,alturaIngresada)
+	
+	imprimir(nombreIngresado + ", su IMC calculado es: " + imcCalculado);
+
+</script>
